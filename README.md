@@ -1,5 +1,5 @@
 # ProjectZomboid_UA_Translation
-Ukrainian translation mod for Project Zomboid (for Build 42)
+Ukrainian translation mod for Project Zomboid (for Build 42) — https://steamcommunity.com/sharedfiles/filedetails/?id=3424652743
 
 _The Answer to the Ultimate Question of Life, the Universe, and Everything is 42
 Відповідь на головне запитання Життя, Всесвіту й Всього Іншого — 42_
