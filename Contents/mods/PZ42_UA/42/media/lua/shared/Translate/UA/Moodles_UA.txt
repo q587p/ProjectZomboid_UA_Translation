@@ -1,0 +1,21 @@
+Moodles_UA = {
+	-- Неприємні відчуття
+	Moodles_Uncomfortable_lvl1 = "Трохи неприємно",
+	Moodles_Uncomfortable_lvl2 = "Неприємно",
+	Moodles_Uncomfortable_lvl3 = "Дуже неприємно",
+	Moodles_Uncomfortable_lvl4 = "Надзвичайно неприємно",
+	Moodles_Uncomfortable_desc_lvl1 = "Ви відчуваєте трохи дискомфорт.",
+	Moodles_Uncomfortable_desc_lvl2 = "Ваш одяг, середовище або щось інше викликає дискомфорт і невдоволення.",
+	Moodles_Uncomfortable_desc_lvl3 = "Ваш одяг, середовище або щось інше викликає у вас сильний дискомфорт і невдоволення.",
+	Moodles_Uncomfortable_desc_lvl4 = "Ваш одяг, середовище або щось інше викликає у вас надзвичайний дискомфорт і невдоволення."
+
+	-- Неприємний запах
+	Moodles_NoxiousSmell_lvl1 = "Поганий запах",
+	Moodles_NoxiousSmell_lvl2 = "Жахливий запах",
+	Moodles_NoxiousSmell_lvl3 = "Неприємний сморід",
+	Moodles_NoxiousSmell_lvl4 = "Смертельні пари",
+	Moodles_NoxiousSmell_desc_lvl1 = "Фу, щось смердить.",
+	Moodles_NoxiousSmell_desc_lvl2 = "Ех, щось смердить жахливо.",
+	Moodles_NoxiousSmell_desc_lvl3 = "Неприємний сморід змушує вас почуватися погано.",
+	Moodles_NoxiousSmell_desc_lvl4 = "Ви не можете дихати. Відійдіть звідси!"
+}

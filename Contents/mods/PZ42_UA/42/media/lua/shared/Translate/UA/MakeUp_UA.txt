@@ -1,0 +1,20 @@
+MakeUp_UA = {
+    -- Uncomfortable
+	Moodles_Uncomfortable_lvl1 = "Трохи незручно",
+	Moodles_Uncomfortable_lvl2 = "Незручно",
+	Moodles_Uncomfortable_lvl3 = "Дуже незручно",
+	Moodles_Uncomfortable_lvl4 = "Надзвичайно незручно",
+	Moodles_Uncomfortable_desc_lvl1 = "Ви відчуваєте трохи незручності.",
+	Moodles_Uncomfortable_desc_lvl2 = "Ваш одяг, оточення або щось інше змушує вас відчувати незручність і невдоволення.",
+	Moodles_Uncomfortable_desc_lvl3 = "Ваш одяг, оточення або щось інше змушує вас відчувати дуже сильну незручність і невдоволення.",
+	Moodles_Uncomfortable_desc_lvl4 = "Ваш одяг, оточення або щось інше змушує вас відчувати надзвичайну незручність і невдоволення."
+	-- NoxiousSmell
+	Moodles_NoxiousSmell_lvl1 = "Неприємний запах",
+	Moodles_NoxiousSmell_lvl2 = "Жахливий запах",
+	Moodles_NoxiousSmell_lvl3 = "Непереносимий сморід",
+	Moodles_NoxiousSmell_lvl4 = "Смертоносні гази",
+	Moodles_NoxiousSmell_desc_lvl1 = "Фу. Щось смердить.",
+	Moodles_NoxiousSmell_desc_lvl2 = "Ой. Щось смердить жахливо.",
+	Moodles_NoxiousSmell_desc_lvl3 = "Жахливий сморід змушує вас почуватися хворим.",
+	Moodles_NoxiousSmell_desc_lvl4 = "Ви не можете дихати. Відійдіть звідси!"
+}

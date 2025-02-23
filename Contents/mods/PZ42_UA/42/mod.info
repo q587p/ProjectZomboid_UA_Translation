@@ -1,0 +1,11 @@
+name=42 UA - Переклад збірки 42 українською
+authors=q587p
+url=https://t.me/Games587
+poster=poster.png
+icon=icon.png
+modversion=0.9.8.7
+pzversion=42
+versionMin=42.0.0
+tags=Translation
+id=PZ42_UA
+description=Переклад збірки 42 українською, робота в процесі. Переклад був нашвидкоруч для рядків, яких не було в базовому перекладі, зара вичитка та покращення і нового тексту, і основи.

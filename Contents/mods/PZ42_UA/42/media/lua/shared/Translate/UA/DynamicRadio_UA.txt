@@ -1,0 +1,4 @@
+DynamicRadio_UA = {
+	AEBS_KpH = " км/год"
+	AEBS_MpH = " миль/год"
+}

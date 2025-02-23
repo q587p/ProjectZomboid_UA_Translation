@@ -1,0 +1,352 @@
+[VERSION]42.3.1
+
+[SECTION]DATE
+
+[NODOT]<INDENT:13>Posted
+[NODOT]<INDENT:13>Tue, February 13, 2025
+
+
+[SECTION]FIXES
+
+
+Fixed NaN calorie error caused by characters starting auto-drinking before the Filling action is completed.
+
+
+[VERSION]42.3.0
+
+[SECTION]DATE
+
+[NODOT]<INDENT:13>Posted
+[NODOT]<INDENT:13>Tue, February 11, 2025
+
+
+[SECTION]NEW
+
+Завершено перший проект системи для зворотного інжинірингу рецептів з предметів.
+[NODOT]<INDENT:13>- Якщо гравець може вивчити рецепти з предмета за допомогою цієї системи, натискання правої кнопки миші на предмет надасть опцію з лампочкою "Дослідити Ремесло".
+[NODOT]<INDENT:13>- Додатково, в режимі налагодження, правий клік відкриє всю інформацію про досліджувані рецепти.
+[NODOT]<INDENT:13>- Дослідження craftRecipe предмета також надасть таку ж кількість досвіду, як і виконання цього craftRecipe.
+[NODOT]<INDENT:13>- Якщо предмет має досліджувані рецепти для гравця, підказка предмета включатиме цю інформацію яскравим кольором.
+[NODOT]<INDENT:13>- Включає прогресію технологічного дерева через дослідження рецептів предметів для щипців (з плоскогубців і затискачів); ножиць і ножів; багато рецептів для бейсбольних бит, шипованих клубів та булав; гілок, дерев'яних паличок, великих гілок/палиць, середніх ручок, бейсбольних бит та коротких бит, сокир та інструментів для обробки шкіри.
+Finalized first draft of a system for reverse engineering recipes from items.
+[NODOT]<INDENT:13>- If a player can learn any recipes from an item with this system, right-clicking on the item will provide a right-click option with a light bulb option to "Research Craft".
+[NODOT]<INDENT:13>- Additionally, in debug mode, right-clicking will reveal all of the information regarding researchable recipes.
+[NODOT]<INDENT:13>- Researching an item's craftRecipe will also grant the same amount of xp as performing that craftRecipe would provide.
+[NODOT]<INDENT:13>- If an item has researchable recipe(s) for a player, the item's tooltip will include, in prominent good-color text, that information.
+[NODOT]<INDENT:13>- Includes Tech-tree-progression via item recipe research for tongs (from pliers and vise grips); shears and scissors; and lower tier knife progression; many baseball bat, spiked club, and mace type weapon recipes; tree branch, wooden stick, large branch/cudgel, medium handle, baseball bat and short bat type weapons, axes, and fleshing tools.
+
+Improved Vertical Aiming.
+[NODOT]<INDENT:13>- Added up and down aiming angles for weapons
+[NODOT]<INDENT:13>- Added missing event back into HandgunDefault.xml to properly transition zombies to correct hit reaction
+
+Added HandWeapon.isSelectFire() and .cycleFireModes()
+Pressing shift + rack (default x) will now cycle through fire modes for select fire weapons
+Guns can now have a safety by adding "Safe" to the list of fire mode possibilities (none of the base guns currently have this)
+Added new Player Customisation Screen.
+Added 2 new animations for stopping a spear charge (holding a spear while Sprinting).
+Added 'Disable' choice to sandbox options for electric and water shutoff dates.
+Added/Restored some Annotated Stash Maps.
+Added six new flyers, fixed Wizard's Den flyer - AMZ Steel, Home Sweet Gnome, Roxy's Roller Rink, Spiffo's Hiring (West Point, Dixie, Louisville)
+Updated Blacksmith van texture.
+Added visible Clay Deposits. It is now possible to take clay from clay tiles (WIP).
+Added a Wooden Masons Trowel and a recipe for carving one.
+Added a Bone Fleshing Tool and a recipe for carving one.
+Added large and small plant drying racks made from sticks and rags; this is so players can build them without needing twine.
+
+Double-clicking an entry in the list of builds or handcraft panel will build it.
+Added Blacksmith, Butcher, Leather, MobileLibrary, and Glass Vans.
+[NODOT]<INDENT:13>- The Blacksmith Van has smithing-related supplies and literature as well as most of the equipment found in the Metalworking van.
+[NODOT]<INDENT:13>- The Butcher Van has tools required to hang/process meat as well as handle some of the mess.
+[NODOT]<INDENT:13>- The Leather Van has tanned hides ready for use, as well as plenty of Awls.
+[NODOT]<INDENT:13>- MobileLibrary has a high chance for Skill Books across the board; note, these should not spawn normally in Louisville or its airport, as these are generally used for rural areas/smaller communities.
+
+
+Added native support for Apple Silicon Macs (as well as Intel Macs, as before). Mac users: please let us know of any issues.
+
+Added SurvivorSwap.lua debugging tool.
+[NODOT]<INDENT:13>- This adds a few functions to modify a survivor's appearance, skills, traits, profession, as well as completely change the inventory and worn gear based on data defined in a Lua table. These can be called mid-game.
+[NODOT]<INDENT:13>- Definitions added to the SurvivorSwap.Survivors and SurvivorSwap.Loadouts tables will be automatically added to world context RMC > [Debug] > Survivor Swap (no definitions are currently added so this submenu will not appear)
+
+
+[SECTION]BALANCE
+
+The Livestock Farmer profession will start the game knowing the MakeBarbedWire recipes.
+New characters that start the game with the carpenter or repairman profession, or the handy trait, will know appropriate improvised melee weapon recipes.
+New characters that start the game with the brawler trait will know the BoltBat recipe in addition to the other melee weapon recipes that they previously knew.
+The Skeleton Psycho randomized story will drop a Fleshing Tool in the same room as the skeletons.
+Molotovs can be crafted using Alcohol, Tequila, Vodka or Whiskey, and Denim Strips in place of rags.
+Fishing rods can also be crafted or repaired using a bone or forged fishing hook.
+Rain will slowly replace water with tainted water for items on the floor that can be filled.
+Adjusted the Wooden Spade item weapon values and removed/changed some inappropriate item tags and script fields.
+
+Rebalanced the craftRecipes for Bone, Bulletvest, Spiking Soft Armor, Tire, and Wood armor:
+Bulletvest armor and Spiking Soft Armor craftRecipes only had their xp awards increased, as did the other recipes.
+Generally, these armor craftRecipes will use autoLearnAll and not autoLearnAny if they have multiple autoLearn skills; i.e. they are harder to autoLearn than most recipes in general.
+
+The skill level requirements, and autoLearn level requirements, were adjusted to provide more of a sense of progression, generally following a, from low to high, forearms/shins -> shoulders/thighs -> body armor progression. Generally speaking, instead of being able to make most of an entire set of an armor type upon hitting a certain skill level(s) breakpoint, it will be paced out in a slower fashion.
+Adjusted the autoLearn requirements for several craftRecipes, mostly related to improvised type weapons and carving.
+[NODOT]<INDENT:13>- This was done to provide a more gradual progression with the autoLearned recipe with these skills, some skills have lower requirements, some have higher, but the net effect should provide the players with more options in general as they progress in skill levels.
+[NODOT]<INDENT:13>- In addition to a more gradual progression, it means less spammy learned recipe messages when gaining skill levels.
+
+
+The make firecracker recipe now produces a distinct crafted firework item instead of the string of red firecrackers.
+The fiberglass handled sledgehammer will break and be dismantled exactly like the wooden handled one, producing a broken long wood handle.
+Added HandAxes to the item clutter pools for a couple of campsite type stories; axes are more rare in general in b42 due to the broad loot spawn nerf.
+Updated Make Bowl of Oatmeal and Cereal recipes to require fluid in the bowl instead of a separate container, reduced amount from 0.4L to 0.3L as that's how much a bowl holds.
+Updated Create Brain Tan recipe to require water in the bowl, reduced amount from 0.5L to 0.3L since that's how much a bowl holds.
+Reduced the amount of milk, sugar, and baking fat needed to Prepare Muffins.
+Wild chickens/turkeys stop producing eggs/feathers unless being taken care of.
+
+Autodrink no longer uses its own math for thirst or poisoning, it calls IsoPlayer.DrinkFluid, so that results are consistent and we can keep balancing it.
+Changed how much thirst water fluids provide for 1L.
+We need feedback on this please, gang!
+
+Recipes for remote triggers and sensors, and traps that use electronic parts now grant Electrical xp, scaling with their skill level requirements.
+
+Small balance for fishing.
+
+
+[SECTION]SOUND
+
+[NODOT]<INDENT:13>New and updated sounds (note, some are not confirmed as working, yet):
+New sounds for action ScytheGrass.
+New sounds for drinking hot drinks out of a mug/teacup.
+New sounds for Sharpening Blades.
+New sounds for making a coffee using a coffee machine.
+New sounds for shearing sheep.
+New sound for crafting sheet sling bag.
+New Garbage footstep sweeteners.
+Changed BulletHitBody to BulletImpact for firearm zombie-hit sound.
+Reworked Rip Clothing Event.
+Fixed Building campfire playing wrong sound.
+Fixed playing wrong sound when making burger patties.
+Fixed Wrong/Missing sfx when cleaning dirty rag/bandage.
+Fixed white mice not having sounds assigned.
+Fixed missing sound when killing an animal with a knife.
+
+
+[SECTION]FIXES
+
+Fixed being able to hit zombies from far away in melee combat.
+Fixed errors while picking up dead animals while foraging.
+Fixed game crashing near stashes from Annotated Maps.
+Fixed manpack radios on zombies not being in the corpse's inventory when killed.
+Fixed fertilized eggs showing unhappiness/boredom malus.
+Fixed eggs sometimes not hatching when on ground.
+Fixed duplication when spam-adding animals to trailers.
+Fixed generator duplication when grabbing eggs from a hutch.
+Fixed bucket duplication in recipes.
+Fixed unlabeled can duplication.
+Fixed issues with Refill Lighter recipe, it doesn't destroy the lighter, accepts any item with the RefillableLighter tag, and only uses lighter fluid once, no funky math involved, if your Lighter isn't full you can craft the recipe again.
+Fixed wrong texture being used when opening dented cans.
+Fixed duplication of Bowls for Make Bowl of Beans recipe.
+Fixed wooden chair becoming unavailable when carpentry is at level 5.
+Fixed not being able to wash clothes in rain collectors or other fluid container tiles.
+Fixed not being able to plumb rain collectors.
+Fixed unified fluid using/transferring data types to fix rounding errors.
+Fixed tainted water handling so tainted source always taints destination.
+Fixed updates to old water modData with FluidContainer calls.
+Fixed issues with FluidContainers and non-natural finite water sources on creation (sinks, baths, etc).
+Fixed not having a shear when a sheep had wool blocking the animal context menu.
+Fixed over-production of dung by Wild animals.
+Fixed issues with Added rat & mouse dung in definitions files.
+Fixed high levels of dung for vermin and farming animals.
+Fixed high levels of dung and vermin in IsoChunk.
+Fixed Frankenstein animals on butcher hook. Sorry.
+Fixed smoker characters accumulating stress when drinking milk, or other liquids. Milk is now 100% less stressful.
+Fixed chopping down Holly Trees sometimes producing rotten berries.
+Fixed players not keeping their momentum when vaulting over fences, either sprinting or running
+Fixed not being able to climb over a fence when the player character is standing inside furniture.
+Fixed Drinking animation using the wrong Pop Bottle model. Added attachment coords for drinking from Pop Bottles.
+Fixed odd anumation with Tongs in the Forge_Armored_Gloves recipe.
+Fixed WorldItemAtlas not using TINT textures on pop bottles etc.
+Fixed Armor, Melee Weapon and Explosives schematics having inconsistent names with Blacksmithing schematics.
+Fixed the name of the Spade Scrap Metal weapon.
+Fixed errors when trying to repair items.
+Fixed receiving Maintenance XP when repairing/sharpening undamaged Shears and Chisels.
+Fixed duplicated inputs for Awls in Forge Fingerless Metal Gloves recipe.
+Fixed missing Watermelon in the Collect Seed recipe.
+Fixed Primitive Forge not being buildable with any concrete or clay cement bucket.
+Fixed vermin dung items not being on the default list of items that are removed from the world after some time.
+Fixed Clay Mug not being usable to make hot beverages.
+Fixed some vehicle scripts having zombieType mechanic defined for them when they shouldn't.
+Fixed vehicle radial allowing infinite sleep. Popup dialog is now generated once, and has no effect outside vehicles.
+Fixed error when pressing E on Select Spawn Location screen.
+Fixed syncing the selected tile and tileset between views in the tile-geometry editor.
+Fixed radial menu option for siphoning gasoline picking the first empty fluid container instead of preferring gas cans.
+Fixed issue with craft menu showing all input fluids as water / not showing currently applied fluid correctly
+Fixed emergent issue with input items with IsEmpty flag not being fillable
+Fixed more cases of being still able to build shelves inside another.
+Fixed alarms not being triggered if the player set the time to a non-multiple of 10 (ie: 2:07). This does create an inconsistency as the clock UI and tooltips only display in multiples of 10 (an alarm ringing at 2:07 will still show 2:00 on the clock)
+Fixed an issue where if a character lacked extra resources for additional constructions, building would fail while still consuming the items.
+Fixed missing tile properties for player-made constructions.
+Fixed missing moddata for created items by craftRecipe, that saves used items.
+Fixed missing SurvGuide button for controllers.
+Fixed the RDSBleach story having Rat Poison in the hand of the corpse if Rat Poison is used by the story and not Bleach (the story name itself is really just a variable name).
+Fixed missing ground model for the stethoscope item.
+Fixed some lua code using getStress and not getBasicStress, which would apply extra stress to characters with the smoker trait.
+Fixed some issues with inappropriate vehicle key spawning.
+Fixed oversized crafted paint brush.
+Fixed issues with water sources displaying an empty context menu when the player isn't thirsty, dirty, and has nothing to fill. The 'drink' option will now always show regardless of thirst level as this was being interpreted as a bug.
+Fixed ISUnequipAction from not properly validating if the player actually has the item in question. In situations where a heavy item was equipped in both hands, this could lead to duplication if the timed action was called on both the primary and secondary hands as the player would drop it twice.
+Fixed missing canDetach Lua callback for WeaponParts, similar to the existing canAttach callback.
+Fixed masks not being unequipped and re-equipped when drinking.
+Fixed some nutritional values of fluids.
+Fixed world item removal not being able to remove items with underscores in their IDs, now they can both match their full IDs or the previous case used by items like glasses and vests.
+Fixed not being able to delete user-defined sandbox presets.
+Fixed vehicles being too bright inside buildings.
+Fixed Game controllers being activated by default when seen for the first time. This is to avoid issues with peripherals that appear to be game controllers but are not.
+Fixed harmless error message on MacOS when calling glfwSetWindowIcon().
+Fixed "compatibility mode" breaking rendering by forcing 1x tile size, which doesn't exist any longer.
+Fixed dismantling electrical items still testing for favourited.
+Fixed Wrench and Engine Parts not counting and not being moved to main inventory before repairing an engine.
+Fixed being able to sleep on "out of gas" signs.
+Fixed not being able to apply plaster to walls/window frames/door frames.
+Fixed not being able to lock doors built with matching keys and knobs.
+Fixed Paint/plaster action not being able to use any item with the Paintbrush tag instead of the specific Paintbrush item ID.
+Fixed Screwdrivers being a hard requirement for attaching/detaching WeaponParts. The `CanAttach` and `CanDetach` Lua callbacks are now exclusively used for validation. All current WeaponParts except AmmoStraps now use `Recipe.WeaponParts.hasScrewdriver`
+Fixed issues with cutaways. Interiors of cutaway buildings are blacked out when the player is more than 10 square away from the building (buildings still cut away when aiming from a distance, due to the need to see occluded areas on the north and west sides).
+Fixed issues with code for Locket names, to allow for better translation. Postcards will now use their own text entry for their name logic.
+Fixed obsolete lines and wrong corner sprits in log fence and stick fence scripts.
+Fixed HollowBook tag being used by both books that could be hollowed and books that had already been hollowed, allowing for infinite crafting. Books that are hollowed now use the IsHollowedBook tag.
+Fixed several recipes not accepting the crafted bowl, there are no separate resulting items for now, so once consumed these will return the standard bowl.
+Fixed not being able to prepare salad using the crafted bowl.
+Fixed an error when getting muffins from a tray.
+Fixed skill level requirement not matching the level that unlocks the last wooden chair tier in the menu.
+Fixed depth textures on two vegetation drying racks.
+Fixed an error that could occur when right-clicking multiple items, on account of new debug and item research information.
+Fixed being unable to craft long spiked clubs.
+Fixed survivor bags not having Butchering I-III.
+Fixed missing recipes for forging some axe head items.
+Fixed missing recipes (axe heads, fleshing tool) to characters with smithing professions or traits, and to smithing magazines.
+Fixed distorted savegame thumbnails.
+Fixed missing 2nd story outside wall of the house at 7116x9163
+Fixed "Converting world" text not displaying the correct number of files being copied.
+Fixed Tim the marching-zombie progress indicator overlapping the "Converting world" text.
+Fixed Table clipping through a wall from another room at 11945x6878.
+Fixed "Make Jar of Produce" not consuming the jar.
+Fixed American Homesteading Farming magazine teaching the separate jarring recipes.
+Fixed the Interact key (E) sometimes queuing up multiple actions when held down a bit too long.
+Fixed moving food into bowls not setting their cooked status.
+Fixed being unable to pick up medium drying racks.
+Fixed large comboboxes and other controls in CharacterCreationMain on small screens.
+Fixed missing areas on the in-game map.
+Fixed Moodle Size option not affecting the displayed moodle size immediately.
+Fixed building recipes referencing the MasonsTrowel item not referencing the MasonsTrowel tag instead.
+Fixed players being able to walk through large plant drying racks - they now occupy all four squares of their footprint without any ghost tiles.
+Fixed plant drying racks not being pick-up-able.
+Fixed characters failing to climb down ropes attached to a fence.
+Fixed modOptions not saving.
+Fixed animal and zombie corpses clipping with the ground tiles when dead.
+Fixed ISPaintMenu.lua from passing the wrong variable to getWallType()
+
+
+[VERSION]42.2.0
+
+[SECTION]DATE
+
+[NODOT]<INDENT:13>Posted
+[NODOT]<INDENT:13>2025-01-27
+
+
+[SECTION]NEW
+
+Building and Vehicle keys, when properly spawned, will have data regarding their origin coordinates recorded in the item data.
+As a Debug or Admin tool, items that have their origin coordinates recorded can be right-clicked on in the inventory interface to get an option to teleport to that item's point of origin.
+[NODOT]<INDENT:13>- Note #1: This will only work for keys spawned after this update; pre-existing keys will not provide that functionality.
+[NODOT]<INDENT:13>- Note #2: This will teleport the character to the square a vehicle initially spawned in. If the vehicle has been moved, it will not be at the teleport destination.
+[NODOT]<INDENT:13>- This is a debug tool for checking exactly what keys unlock but could have other debug/admin utilities for stuff like annotated maps, fliers, quest items, etc.
+
+Added isThumpable = false to several buildMenu entities that shouldn't have collision.
+Added moveables properties for several buildMenu entities that are missing moveable properties.
+Added proper model for Wooden Spade.
+Added new Music Fest flyer.
+UI improvements when creating animal designation zones
+[NODOT]<INDENT:13>- Fixed calculation of which square is under the mouse pointer.
+[NODOT]<INDENT:13>- Highlight the square under the mouse pointer.
+[NODOT]<INDENT:13>- Render the zone being created in red if the zone size is invalid.
+[NODOT]<INDENT:13>- Cancel creating a zone after releasing the mouse button when the zone size is invalid.
+[NODOT]<INDENT:13>- Fixed panel getting too tall to close with many animals in a zone. Changed the Livestock Zone UI to display a scrolling list of animals. 
+VRAM usage optimisation.
+Added Concrete tag to all proper buckets and made it so recipes use the tag instead of specific bucket items.
+Added MayDegradeLight to several recipes that use a Mason's Trowel.
+
+
+[SECTION]BALANCE
+
+Updated loot distribution. 
+[NODOT]<INDENT:13>- Increased gun spawns in gun stores and police storage to make them feel more rewarding to loot.
+[NODOT]<INDENT:13>- Spiced up prison storage loot. The storage room now acts as a repository for riot control's armor and shotguns. [Shotguns cannot properly spawn yet, mappers will put in steel/military lockers later.]
+[NODOT]<INDENT:13>- Added PrisonLaundry to the prison's laundry room. Washers and dryers should spawn uniforms.
+[NODOT]<INDENT:13>- Added the Locksmith, Florist, and Craft Supply vehicles.
+[NODOT]<INDENT:13>- Set up the Fire Department garage. FireStorageMechanics, as well as PiliceStorageMechanics and police garages, have a decent chance to spawn a red lightbar.
+[NODOT]<INDENT:13>- Fleshing Tools now have a chance of spawning with other tools in GigaMart; however, as with any other loot spawning, they will not always spawn in GigaMart.
+[NODOT]<INDENT:13>- Added the Fleshing Tool to several loot distros/contexts.
+[NODOT]<INDENT:13>- Adjustments were made to force butchery containers to spawn in many grocery store and kitchen contexts; previously they could spawn but not always, now the loot spawning code will try to always ensure that at least 1 butchering container spawns in relevant contexts.
+[NODOT]<INDENT:13>- Seafood delivery vans can sometimes spawn a Fleshing Tool in their cargo compartment.
+
+Added blacksmithing vans and stepvans. 
+[NODOT]<INDENT:13>- They will spawn metal welder loot until the loot distributions are updated to have them spawn blacksmithing items. 
+Torches (drainable that can be activated) are now consistent with any day length.
+[NODOT]<INDENT:13>- Also adjusted some of the light strength for some torches (penlight being way smaller than regular torch for ex.)
+[NODOT]<INDENT:13>- Duration of the battery depends on light strength, the Torch will be around 24h, Lighter only 1h, smaller light strength will mean longer battery duration.
+Updated Charcoal Burning Pile to accept any item with the DigGrave tag, not just Base.Shovel. Added MayDegradeLight tag so there's a small chance of damaging the tool used.
+
+
+[SECTION]FIXES
+
+Fixed character body overtwists while aiming and rotating. 
+[NODOT]<INDENT:13>- Character's upper torso no longer gets frozen as it twists around, due to missing valid animation.
+[NODOT]<INDENT:13>- Default aim animation requires condition { weapon == '' }
+[NODOT]<INDENT:13>- *However, before the character has equipped anything, they have weapon = nullPtr.
+[NODOT]<INDENT:13>- Updated StringUtils.equalsIgnoreCase to return TRUE if both strings are either null or empty.
+[NODOT]<INDENT:13>- *So these all return TRUE.
+[NODOT]<INDENT:13>- *equalsIgnoreCase("", "")
+[NODOT]<INDENT:13>- *equalsIgnoreCase("", null)
+[NODOT]<INDENT:13>- *equalsIgnoreCase(null, "")
+[NODOT]<INDENT:13>- *equalsIgnoreCase(null, null)
+[NODOT]<INDENT:13>- Character no longer overtwists when unarmed or holding a 1handed melee weapon.
+[NODOT]<INDENT:13>- Unarmed and 1handed aim anims have a maxTwist of 45 degrees to prevent over-twisting the spine.
+[NODOT]<INDENT:13>- 2handed and projectile weapons still allow a 70-degree max-twist.
+[NODOT]<INDENT:13>- Maximum twist now dictated by parent AnimLayer.
+[NODOT]<INDENT:13>- Sub-layers can only twist up to this limit.
+[NODOT]<INDENT:13>- ie. aim maxTwist = 45 degrees cannot be overridden by the turning sub-state's maxTwist = 70 degrees. 
+Fixed character animation freezing when cancelling exercise.
+Fixed texture compression not working on Windows OS.
+Fixed issues with vehicles on Mac.
+Fixed characters spawning in Muldraugh with the Doctor or Nurse profession being trapped in a wall when they spawn in Cortmans.
+Fixed negative-world-coordinate issues with vehicle collision and interaction.
+Fixed being able to open Doors from afar.
+Removed mode:use from several recipes.
+Fixed several packing recipes allowing for mixed items.
+Fixed Create Brain Tan recipe duplicating Bowls.
+Fixed duplication of bowls when moving food from a pot.
+Fixed a reference to an armor item instead of the recipe that creates it in one of the metalworking recipe magazines. 
+Fixed issue where recipe input items missing module declaration (such as 'Base.') would be counted incorrectly for crafting requirements.
+Fixed several missing recipe names.
+Fixed bucket models missing in animations.
+Fixed wall blood splats rendering on cutaway areas of walls.
+Fixed wall blood splats rendering too bright on dark squares.
+Fixed B no longer closing crafting menu.
+Fix isExclusive flag not working for right-click context menu crafting.
+Fixed missing blocks placement property for several new crafting-related tiles so that players can't build additional tiles on top of them.
+Fixed errors with new vehicle textures, including locksmith vans using only one of two textures, florist stepvans incorrectly using masonry stepvan textures and a missing texture for one masonry stepvan.
+Eggs will lose their fertilized status when too cold (inside a fridge).
+Fixed Context Menu for Open/Close doors from triggering then canceling the WalkTo action.
+Fixed "Possible Items" tab not resetting after closing the menu.
+Fixed an error with teleporting while having the vehicle animal trailer UI opened.
+Fixed being able to build shelves inside one another.
+Fixed being able to place shelves in the wrong orientation.
+Fixed smelting recipes not consuming certain items, like pans.
+Fixed broken behavior when climbing over combined north-west fence corner tiles.
+Fixed the Residential colorblind pattern not being applied on some buildings.
+Fixed error with the sandbox setting for "percentage of weapons attached to zombies"-code.
+Fixed not being able to attach a large stone axe to the back hotbar slot.
+Fixed flax seed packets requiring/giving the wrong kind of flax.
+"Put in" foraging context menu option now uses InventoryContainer.isItemAllowed for validation.
+Fixed exception in ISRemovePatch when attempting to give the player a patch back.
+Fixed some typos with item names.
+Fixed some typos and errors in existing flyers.
+Fixed lamp context menu not setting playerObj and playerInv, causing errors.
+Fixed removing a gas mask filter not setting the filter's current uses correctly and not setting the NoFilter variable if it's a mask that gets replaced by a different item ID.
+Added PlayerData null safety check to ISVehicleDashboard.onExitVehicle.

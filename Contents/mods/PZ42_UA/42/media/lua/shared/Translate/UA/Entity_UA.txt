@@ -1,0 +1,24 @@
+Entity_UA = {
+    EC_Entity_DisplayName_Default = "Загальна назва сутності",
+    EC_Entity_BuildDescription_Default = "Загальний опис побудови сутності",
+
+    -- Енергія
+    EC_Energy = "Енергія",
+    EC_Energies = "Енергії",
+    EC_Energy_Not_Set = "Енергія не встановлена",
+    -- Типи енергії
+    EC_Energy_Electric = "Електрична",
+    EC_Energy_Mechanical = "Механічна",
+    EC_Energy_Thermal = "Теплова",
+    EC_Energy_Steam = "Парова",
+
+    -- Загальне
+    EC_Locked = "Заблоковано",
+    EC_Stored = "Збережено",
+    EC_Weight = "Обтяжено",
+    EC_Progress = "Прогрес",
+
+    -- Компонент
+    EC_Workstation = "Робоча станція",
+    EC_Recipes = "Рецепти",
+}
